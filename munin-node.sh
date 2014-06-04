@@ -21,7 +21,7 @@ NTP_PEER="pool.ntp.org";
 PLUGINPATTERN=$(dirname $0)"/munin-node-plugin.d/*"
 
 # Remove unwanted plugins from this list
-PLUGINS="df cpu if_ if_err_ users load memory processes swap uptime ipmi_temp hdd_temp plugindir_"
+PLUGINS="df cpu if_ if_err_ users load memory processes swap ipmi_temp hdd_temp plugindir_"
 # ===== LIB FUNCTIONS =====
 clean_fieldname() {
   echo "$@" | sed -e 's/^[^A-Za-z_]/_/' -e 's/[^A-Za-z0-9_]/_/g'
