@@ -163,7 +163,7 @@ config_if() {
   echo "up.min 0"
   echo "up.negative down"
   echo "up.cdef up,8,*"
-  if ethtool $1 | grep -q Speed; then
+  if ethtool $1 | grep -q 'Speed: [0-9]\+'; then
     MAX=$(($(ethtool $1 | grep Speed | sed -e 's/[[:space:]]\{1,\}/ /g' -e 's/^ //' -e 's/M.*//' | cut -d\  -f2) * 1000000))
     echo "up.max $MAX"
     echo "down.max $MAX"
