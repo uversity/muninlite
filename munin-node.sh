@@ -177,6 +177,7 @@ fetch_if() {
 }
 config_if_err() {
 
+  ethname=$1
 # Uncomment to rename network interfaces
 #  if [ $1 == "eth0" ]; then
 #    ethname="eth1"
