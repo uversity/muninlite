@@ -139,6 +139,7 @@ fetch_cpu() {
 }
 config_if() {
 
+  ethname=$1
 # Uncomment to rename network interfaces
 #  if [ $1 == "eth0" ]; then
 #    ethname="eth1"
